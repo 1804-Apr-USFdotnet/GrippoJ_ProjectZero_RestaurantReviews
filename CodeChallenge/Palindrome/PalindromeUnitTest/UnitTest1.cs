@@ -19,7 +19,13 @@ namespace PalindromeUnitTest
             String outputStr = test.StripNonAlphaNumeric(inputStr.Replace(" ", ""));
             Pal pMoney = new Pal();
             pMoney.checkPalindrome(outputStr);
-            Assert.AreEqual(pMoney.palString, notCaseSensitive);
+            Assert.AreEqual(pMoney.palString, answer);
+        }
+
+        [TestMethod]
+        public void TestMethod2()
+        {
+
         }
     }
 }
