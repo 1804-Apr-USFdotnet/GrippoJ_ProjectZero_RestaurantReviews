@@ -16,13 +16,13 @@ namespace Palindrome
             Stripper test = new Stripper();
             String outputStr = test.StripNonAlphaNumeric(inputStr.Replace(" ",""));
             Console.WriteLine(outputStr);
-            Palindrome pMoney = new Palindrome();
+            Pal pMoney = new Pal();
             pMoney.printer(outputStr);
             Console.Read();
         }
     }
 
-    class Stripper
+    public class Stripper
     {
         public string StripNonAlphaNumeric(string inputStr)
         {
@@ -32,14 +32,17 @@ namespace Palindrome
         }
     }
 
-    class Palindrome
+    public class Pal
     {
+        public string palString;
+
         public bool checkPalindrome(String inputStr)
         {
             string notCaseSensitive = inputStr.ToLower();
             char[] charArray = notCaseSensitive.ToCharArray();
             Array.Reverse(charArray);
             string reversedString = new String(charArray);
+            palString = reversedString;
             return (notCaseSensitive == reversedString);
 
         }
