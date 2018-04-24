@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PZModels
 {
-    class Review
+    public class Review
     {
         public Guid Id { get; set; }
         public string RestaurantKey { get; set; }

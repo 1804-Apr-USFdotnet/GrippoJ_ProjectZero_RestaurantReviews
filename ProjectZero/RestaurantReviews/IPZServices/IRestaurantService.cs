@@ -1,8 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
+using PZModels;
 
 namespace IPZServices
 {
-    public class Class1
+    public interface IRestaurantService
     {
+        List<Restaurant> AllRestaurants();
+        List<Restaurant> RestaurantById();
+        List<Restaurant> GetTopThreeRestaurants();
+
     }
 }

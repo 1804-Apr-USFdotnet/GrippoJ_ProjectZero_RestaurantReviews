@@ -1,12 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using IPZServices;
+using PZModels;
 
 namespace PZServices
 {
-    public class Class1
+    public class RestaurantService : IRestaurantService
     {
+        public List<Restaurant> AllRestaurants()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public List<Restaurant> RestaurantById()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public List<Restaurant> GetTopThreeRestaurants()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
