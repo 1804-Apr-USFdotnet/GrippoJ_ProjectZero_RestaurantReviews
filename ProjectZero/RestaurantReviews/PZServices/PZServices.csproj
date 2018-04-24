@@ -42,6 +42,17 @@
   <ItemGroup>
     <Compile Include="RestaurantService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReviewService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IPZServices\IPZServices.csproj">
+      <Project>{0ed58a0f-f4df-436f-b435-3789f0a78f98}</Project>
+      <Name>IPZServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PZModels\PZModels.csproj">
+      <Project>{872c9a72-9017-4535-9d09-15b7a2084292}</Project>
+      <Name>PZModels</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
