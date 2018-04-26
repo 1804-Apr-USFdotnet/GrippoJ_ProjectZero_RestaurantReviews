@@ -11,17 +11,22 @@ namespace ConsoleApp1
 {
     class FranchiseSerialization
     {
+        private readonly string _path;
+
+        public FranchiseSerialization(string path)
+        {
+            _path = path;
+        }
+
         public List<Franchise> GetFranchisesXML()
         {
             FranchiseCollection f = null;
-            string path = "Franchise.xml";
-
             XmlSerializer serializer = new XmlSerializer(typeof(FranchiseCollection));
 
-            using (StreamReader reader = new StreamReader(path))
-                f = (FranchiseCollection)serializer.Deserialize(reader);
-            return f.FranchiseCollectionList;
+            using (StreamReader reader = new StreamReader(_path))
+            f = (FranchiseCollection)serializer.Deserialize(reader);
 
+            return f.FranchiseCollectionList;
         }
     }
 
