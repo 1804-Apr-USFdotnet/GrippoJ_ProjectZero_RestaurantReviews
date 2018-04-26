@@ -9,7 +9,7 @@ using PZModels;
 
 namespace ConsoleApp1
 {
-    class FranchiseSerialization
+    public class FranchiseSerialization
     {
         private readonly string _path;
 

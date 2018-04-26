@@ -9,7 +9,7 @@ using PZModels;
 
 namespace ConsoleApp1
 {
-    class ReviewSerialization
+    public class ReviewSerialization
     {
         private readonly string _path;
 

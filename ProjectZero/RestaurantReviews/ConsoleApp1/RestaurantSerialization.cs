@@ -9,7 +9,7 @@ using PZModels;
 
 namespace ConsoleApp1
 {
-    class RestaurantSerialization
+    public class RestaurantSerialization
     {
         private readonly string _path;
 
