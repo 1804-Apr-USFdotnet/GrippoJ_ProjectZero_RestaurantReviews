@@ -24,17 +24,18 @@ namespace PZRepositories
 
         public IEnumerable<Restaurant> GetAll()
         {
-            throw new NotImplementedException();
+            return _pzRepoContext.Restaurants;
         }
 
         public void Add(Restaurant restaurant)
         {
-            throw new NotImplementedException();
+            _pzRepoContext.Restaurants.Add(restaurant);
+            _pzRepoContext.SaveChanges();
         }
 
         public void UpdateRestaurants()
         {
-            throw new NotImplementedException();
+            _pzRepoContext.SaveChanges();
         }
     }
 }
