@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace PZRepositories
 {
-    class DBInit : CreateDatabaseIfNotExists<PZRestaurantContext>
+    class DBInit : CreateDatabaseIfNotExists<PZRepoContext>
     {
-        protected override void Seed(PZRestaurantContext context)
+        protected override void Seed(PZRepoContext context)
         {
             base.Seed(context);
         }

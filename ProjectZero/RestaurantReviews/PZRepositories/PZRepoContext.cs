@@ -8,11 +8,11 @@ using PZModels;
 
 namespace PZRepositories
 {
-    public class PZRestaurantContext : DbContext
+    public class PZRepoContext : DbContext
     {
-        public PZRestaurantContext() : base("name=PZRestaurantConnectionString")
+        public PZRepoContext() : base("name=PZRestaurantConnectionString")
         {
-            Database.SetInitializer<PZRestaurantContext>(new DBInit());
+            Database.SetInitializer<PZRepoContext>(new DBInit());
         }
 
         public DbSet<Restaurant> Restaurants { get; set; }

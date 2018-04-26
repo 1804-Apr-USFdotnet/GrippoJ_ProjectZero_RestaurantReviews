@@ -19,6 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{FCAE3C29-7
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PZRepositories", "PZRepositories\PZRepositories.csproj", "{0A4AF450-CD7B-4A21-9623-D320C43B507D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PZRepositoryInterface", "PZRepositoryInterface\PZRepositoryInterface.csproj", "{FEADC998-84E0-4C1D-BB83-33A7A1EB787F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{0A4AF450-CD7B-4A21-9623-D320C43B507D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A4AF450-CD7B-4A21-9623-D320C43B507D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A4AF450-CD7B-4A21-9623-D320C43B507D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEADC998-84E0-4C1D-BB83-33A7A1EB787F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEADC998-84E0-4C1D-BB83-33A7A1EB787F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEADC998-84E0-4C1D-BB83-33A7A1EB787F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEADC998-84E0-4C1D-BB83-33A7A1EB787F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,6 +60,7 @@ Global
 		{308F0AE1-3879-4E3F-8A4A-8D745A140D55} = {BF572A4A-7C69-4CBB-A01A-F705BFD8EA91}
 		{0ED58A0F-F4DF-436F-B435-3789F0A78F98} = {BF572A4A-7C69-4CBB-A01A-F705BFD8EA91}
 		{0A4AF450-CD7B-4A21-9623-D320C43B507D} = {FCAE3C29-7537-45E8-922E-16DF4D1BDFD5}
+		{FEADC998-84E0-4C1D-BB83-33A7A1EB787F} = {FCAE3C29-7537-45E8-922E-16DF4D1BDFD5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1253AF3F-73A2-4E44-979E-7034B8BC1661}
