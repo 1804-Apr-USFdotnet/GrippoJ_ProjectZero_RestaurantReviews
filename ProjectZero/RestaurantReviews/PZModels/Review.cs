@@ -8,8 +8,8 @@ namespace PZModels
 {
     public class Review
     {
-        public Guid Id { get; set; }
-        public string RestaurantKey { get; set; }
+        public int revIndex { get; set; }
+        public string RestaurantID { get; set; }
         public string Reviewer { get; set; }
         public string Description { get; set; }
         public int Rating { get; set; }
@@ -17,7 +17,7 @@ namespace PZModels
 
         public override string ToString()
         {
-            return $"\nReviewer: {Reviewer}\nReview: {Description}\nRating: {Rating}\n";
+            return $"\nrevIndex: {revIndex}\nRestaurantID: {RestaurantID}\nReviewer: {Reviewer}\nReview: {Description}\nRating: {Rating}\nrDate: {rDate}\n";
         }
     }
 }

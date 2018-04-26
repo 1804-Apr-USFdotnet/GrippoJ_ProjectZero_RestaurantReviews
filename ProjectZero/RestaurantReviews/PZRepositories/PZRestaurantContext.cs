@@ -12,10 +12,11 @@ namespace PZRepositories
     {
         public PZRestaurantContext() : base("name=PZRestaurantConnectionString")
         {
-            Database.SetInitializer<PZRestaurantContext>();
+            Database.SetInitializer<PZRestaurantContext>(new DBInit());
         }
 
         public DbSet<Restaurant> Restaurants { get; set; }
         public DbSet<Review> Reviews { get; set; }
+        public DbSet<Franchise> Franchises { get; set; }
     }
 }
