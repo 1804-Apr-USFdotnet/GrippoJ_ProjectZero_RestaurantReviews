@@ -16,24 +16,25 @@ namespace PZRepositories
         {
             _pzRepoContext = context;
         }
-        public Review GetById()
+        public Review GetById(int id)
         {
-            throw new NotImplementedException();
+            return _pzRepoContext.Reviews.First(x => x.revIndex == id);
         }
 
         public IEnumerable<Review> GetAll()
         {
-            throw new NotImplementedException();
+            return _pzRepoContext.Reviews;
         }
 
         public void Add(Review review)
         {
-            throw new NotImplementedException();
+            _pzRepoContext.Reviews.Add(review);
+            _pzRepoContext.SaveChanges();
         }
 
         public void UpdateReviews()
         {
-            throw new NotImplementedException();
+            _pzRepoContext.SaveChanges();
         }
     }
 }
