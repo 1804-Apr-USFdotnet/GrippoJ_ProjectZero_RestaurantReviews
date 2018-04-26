@@ -9,7 +9,7 @@ namespace PZModels
     public class Restaurant
     {
         public int rIndex { get; set; }
-        public string key { get; set; }
+        public int FranchiseID { get; set; }
         public string name { get; set; }
         public string city { get; set; }
         public string zipcode { get; set; }
@@ -20,7 +20,7 @@ namespace PZModels
         public override string ToString()
         {
             return
-                $"\nindex: {rIndex}\nname: {name} \ncity: {city}\nZip: {zipcode}\nstate: {state}\naddress: {address}\naverage rating: {avgRating}\n";
+                $"\nindex: {rIndex}\nfIndex: {FranchiseID}\nname: {name} \ncity: {city}\nZip: {zipcode}\nstate: {state}\naddress: {address}\naverage rating: {avgRating}\n";
         }
 
         public void calcAvgRating(IEnumerable<Review> reviews)

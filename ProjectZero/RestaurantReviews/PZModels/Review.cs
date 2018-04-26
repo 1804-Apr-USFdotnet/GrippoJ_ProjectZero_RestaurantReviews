@@ -13,6 +13,7 @@ namespace PZModels
         public string Reviewer { get; set; }
         public string Description { get; set; }
         public int Rating { get; set; }
+        public DateTime rDate { get; set; }
 
         public override string ToString()
         {
