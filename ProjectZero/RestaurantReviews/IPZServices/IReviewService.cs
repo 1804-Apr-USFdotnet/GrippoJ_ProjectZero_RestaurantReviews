@@ -8,6 +8,7 @@ namespace IPZServices
     public interface IReviewService
     {
         List<Review> AllReviews();
-        List<Review> ReviewById();
+        Review ReviewById(int id);
+        List<Review> ReviewsByRestaurantId(int id);
     }
 }

@@ -9,7 +9,7 @@ namespace PZModels
     public class Review
     {
         public int revIndex { get; set; }
-        public string RestaurantID { get; set; }
+        public int RestaurantID { get; set; }
         public string Reviewer { get; set; }
         public string Description { get; set; }
         public int Rating { get; set; }
