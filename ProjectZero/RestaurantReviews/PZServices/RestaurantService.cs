@@ -19,14 +19,15 @@ namespace PZServices
             return _restaurantRepo.GetAll().ToList();
         }
 
-        public List<Restaurant> RestaurantById()
+        public Restaurant RestaurantById(int id)
         {
-            throw new System.NotImplementedException();
+            return _restaurantRepo.GetById(id);
         }
 
         public List<Restaurant> GetTopThreeRestaurants()
         {
-            throw new System.NotImplementedException();
+            IEnumerable<Restaurant> query = _restaurantRepo.GetAll();
+            return query.OrderByDescending(x => x.avgRating).Take(3).ToList();
         }
     }
 }

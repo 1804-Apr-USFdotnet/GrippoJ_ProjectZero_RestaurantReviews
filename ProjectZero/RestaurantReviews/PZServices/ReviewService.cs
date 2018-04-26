@@ -19,7 +19,7 @@ namespace PZServices
         }
         public List<Review> AllReviews()
         {
-            throw new NotImplementedException();
+            return _pzReviewRepo.GetAll().ToList();
         }
 
         public Review ReviewById(int id)

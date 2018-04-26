@@ -7,7 +7,7 @@ namespace IPZServices
     public interface IRestaurantService
     {
         List<Restaurant> AllRestaurants();
-        List<Restaurant> RestaurantById();
+        Restaurant RestaurantById(int id);
         List<Restaurant> GetTopThreeRestaurants();
 
     }
