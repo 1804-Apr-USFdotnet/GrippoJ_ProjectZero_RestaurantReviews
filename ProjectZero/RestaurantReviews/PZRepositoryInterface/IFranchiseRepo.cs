@@ -7,7 +7,7 @@ namespace PZRepositoryInterface
 {
     public interface IFranchiseRepo
     {
-        Franchise GetById();
+        Franchise GetById(int id);
         IEnumerable<Franchise> GetAll();
         void Add(Franchise franchise);
         void UpdateFranchises();

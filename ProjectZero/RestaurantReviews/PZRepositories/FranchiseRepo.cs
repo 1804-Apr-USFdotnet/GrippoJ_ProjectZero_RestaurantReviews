@@ -16,25 +16,26 @@ namespace PZRepositories
         {
             _pzRepoContext = context;
         }
-        public Franchise GetById()
+        public Franchise GetById(int id)
         {
-            throw new NotImplementedException();
+            return _pzRepoContext.Franchises.First(x => x.fIndex == id);
         }
 
         public IEnumerable<Franchise> GetAll()
         {
-            throw new NotImplementedException();
+            return _pzRepoContext.Franchises;
         }
 
 
         public void Add(Franchise franchise)
         {
-            throw new NotImplementedException();
+            _pzRepoContext.Franchises.Add(franchise);
+            _pzRepoContext.SaveChanges();
         }
 
         public void UpdateFranchises()
         {
-            throw new NotImplementedException();
+            _pzRepoContext.SaveChanges();
         }
     }
 }
