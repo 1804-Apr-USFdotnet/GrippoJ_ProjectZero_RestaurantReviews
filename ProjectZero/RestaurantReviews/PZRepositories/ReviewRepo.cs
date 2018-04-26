@@ -8,36 +8,35 @@ using PZRepositoryInterface;
 
 namespace PZRepositories
 {
-    class RestaurantRepo : IRestaurantRepo
+    class ReviewRepo : IReviewRepo
     {
         private readonly PZRepoContext _pzRepoContext;
 
-        public RestaurantRepo(PZRepoContext context)
+        public ReviewRepo(PZRepoContext context)
         {
             _pzRepoContext = context;
         }
-
-        public Restaurant GetById()
+        public Review GetById()
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Restaurant> GetByFranchiseId()
+        public IEnumerable<Review> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Restaurant> GetAll()
+        public IEnumerable<Review> GetByRestaurantId()
         {
             throw new NotImplementedException();
         }
 
-        public void Add(Restaurant restaurant)
+        public void Add(Review review)
         {
             throw new NotImplementedException();
         }
 
-        public void UpdateRestaurants()
+        public void UpdateReviews()
         {
             throw new NotImplementedException();
         }
