@@ -26,11 +26,6 @@ namespace PZRepositories
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Review> GetByRestaurantId()
-        {
-            throw new NotImplementedException();
-        }
-
         public void Add(Review review)
         {
             throw new NotImplementedException();

@@ -9,7 +9,6 @@ namespace PZRepositoryInterface
     {
         Franchise GetById();
         IEnumerable<Franchise> GetAll();
-        IEnumerable<Franchise> GetByGenre();
         void Add(Franchise franchise);
         void UpdateFranchises();
     }

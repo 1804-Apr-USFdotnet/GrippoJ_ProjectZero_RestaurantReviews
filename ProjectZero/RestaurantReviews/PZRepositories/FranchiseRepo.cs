@@ -26,10 +26,6 @@ namespace PZRepositories
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Franchise> GetByGenre()
-        {
-            throw new NotImplementedException();
-        }
 
         public void Add(Franchise franchise)
         {

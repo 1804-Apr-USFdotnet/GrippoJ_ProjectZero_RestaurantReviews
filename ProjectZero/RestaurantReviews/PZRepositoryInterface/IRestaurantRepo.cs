@@ -6,8 +6,7 @@ namespace PZRepositoryInterface
 {
     public interface IRestaurantRepo
     {
-        Restaurant GetById();
-        IEnumerable<Restaurant> GetByFranchiseId(); 
+        Restaurant GetById(int id);
         IEnumerable<Restaurant> GetAll();
         void Add(Restaurant restaurant);
         void UpdateRestaurants();

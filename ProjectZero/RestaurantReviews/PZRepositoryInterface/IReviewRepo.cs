@@ -9,7 +9,6 @@ namespace PZRepositoryInterface
     {
         Review GetById();
         IEnumerable<Review> GetAll();
-        IEnumerable<Review> GetByRestaurantId();
         void Add(Review review);
         void UpdateReviews();
     }

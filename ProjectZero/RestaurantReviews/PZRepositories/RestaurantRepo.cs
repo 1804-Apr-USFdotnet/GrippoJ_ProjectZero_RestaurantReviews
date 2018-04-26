@@ -17,14 +17,9 @@ namespace PZRepositories
             _pzRepoContext = context;
         }
 
-        public Restaurant GetById()
+        public Restaurant GetById(int id)
         {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<Restaurant> GetByFranchiseId()
-        {
-            throw new NotImplementedException();
+            return _pzRepoContext.Restaurants.First(x => x.rIndex == id);
         }
 
         public IEnumerable<Restaurant> GetAll()
