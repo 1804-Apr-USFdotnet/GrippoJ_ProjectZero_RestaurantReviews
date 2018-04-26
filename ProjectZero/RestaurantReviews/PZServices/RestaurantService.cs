@@ -1,14 +1,22 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using IPZServices;
 using PZModels;
+using PZRepositoryInterface;
 
 namespace PZServices
 {
     public class RestaurantService : IRestaurantService
     {
+        private readonly IRestaurantRepo _restaurantRepo;
+        public RestaurantService(IRestaurantRepo restaurantRepo)
+        {
+            _restaurantRepo = restaurantRepo;
+        }
+
         public List<Restaurant> AllRestaurants()
         {
-            throw new System.NotImplementedException();
+            return _restaurantRepo.GetAll().ToList();
         }
 
         public List<Restaurant> RestaurantById()

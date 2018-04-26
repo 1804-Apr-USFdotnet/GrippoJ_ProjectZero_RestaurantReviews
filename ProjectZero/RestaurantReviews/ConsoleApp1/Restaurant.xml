@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RestaurantCollection>
+  <Restaurant>
+    <rIndex>101</rIndex>
+    <FranchiseID>21</FranchiseID>
+    <name>Murica</name>
+    <city>New Rochelle</city>
+    <zipcode>10801</zipcode>
+    <state>New York</state>
+    <address>1 belmont ave</address>
+  </Restaurant>
+  <Restaurant>
+    <rIndex>102</rIndex>
+    <FranchiseID>21</FranchiseID>
+    <name>Murica</name>
+    <city>New Roc</city>
+    <zipcode>10802</zipcode>
+    <state>New Yank</state>
+    <address>2 belmont ave</address>
+  </Restaurant>
+  <Restaurant>
+    <rIndex>103</rIndex>
+    <FranchiseID>22</FranchiseID>
+    <name>Sal's Pizza</name>
+    <city>New Rochelle</city>
+    <zipcode>10801</zipcode>
+    <state>New York</state>
+    <address>3 belmont ave</address>
+  </Restaurant>
+  <Restaurant>
+    <rIndex>104</rIndex>
+    <FranchiseID>22</FranchiseID>
+    <name>Sal's Pizza</name>
+    <city>New Roc</city>
+    <zipcode>10802</zipcode>
+    <state>New Yank</state>
+    <address>4 belmont ave</address>
+  </Restaurant>
+</RestaurantCollection>

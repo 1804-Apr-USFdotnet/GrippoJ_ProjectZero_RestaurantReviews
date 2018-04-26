@@ -4,14 +4,14 @@ using System.IO;
 using System.Xml.Serialization;
 using PZModels;
 
-namespace RestaurantReviews
+namespace ConsoleApp1
 {
     class SerializeConsole
     {
         static void Main(string[] args)
         {
             FranchiseCollection f = null;
-            string path = @"C:\Users\jgrip\Documents\GitHub\GrippoJ_ProjectZero_RestaurantReviews\ProjectZero\RestaurantReviews\ConsoleApp1\franchise.xml";
+            string path = "Franchise.xml";
 
             XmlSerializer serializer = new XmlSerializer(typeof(FranchiseCollection));
 
@@ -23,7 +23,7 @@ namespace RestaurantReviews
             {
                 Console.WriteLine(x.ToString());
             }
-            Console.WriteLine(f.FranchiseCollectionList.Count);
+
             Console.Read();
         }
     }

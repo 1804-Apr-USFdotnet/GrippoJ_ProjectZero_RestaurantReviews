@@ -70,9 +70,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBInit.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="FranchiseRepo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PZRestaurantContext.cs" />
+    <Compile Include="PZRepoContext.cs" />
+    <Compile Include="RestaurantRepo.cs" />
+    <Compile Include="ReviewRepo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -82,6 +84,10 @@
     <ProjectReference Include="..\PZModels\PZModels.csproj">
       <Project>{872c9a72-9017-4535-9d09-15b7a2084292}</Project>
       <Name>PZModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PZRepositoryInterface\PZRepositoryInterface.csproj">
+      <Project>{feadc998-84e0-4c1d-bb83-33a7a1eb787f}</Project>
+      <Name>PZRepositoryInterface</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
