@@ -28,5 +28,17 @@ namespace ApplicationClient
 
             Console.ReadLine();
         }
+
+        public void PrintTopThree()
+        {
+            List<Restaurant> restaurants = _pzServices.GetTopThreeRestaurants();
+
+            foreach (Restaurant r in restaurants)
+            {
+                Console.WriteLine(r.ToString());
+            }
+
+            Console.ReadLine();
+        }
     }
 }

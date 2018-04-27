@@ -38,5 +38,11 @@ namespace ApplicationServices
                 r.calcAvgRating(restReviews);
             }
         }
+
+        public List<Restaurant> GetTopThreeRestaurants()
+        {
+            return _restaurantService.GetTopThreeRestaurants();
+        }
+
     }
 }
