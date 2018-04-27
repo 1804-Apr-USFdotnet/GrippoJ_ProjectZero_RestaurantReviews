@@ -9,7 +9,7 @@ using PZRepositoryInterface;
 
 namespace PZServices
 {
-    class ReviewService : IReviewService
+    public class ReviewService : IReviewService
     {
         private readonly IReviewRepo _pzReviewRepo;
 

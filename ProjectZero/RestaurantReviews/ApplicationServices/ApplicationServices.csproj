@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{40240407-1664-45D0-9CE1-354981AB2DCB}</ProjectGuid>
+    <ProjectGuid>{5D4E904A-4323-4DCC-9C07-4E6D1C00FEB7}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>ConsoleApp1</RootNamespace>
-    <AssemblyName>ConsoleApp1</AssemblyName>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ApplicationServices</RootNamespace>
+    <AssemblyName>ApplicationServices</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,16 +22,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -52,25 +47,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FranchiseSerialization.cs" />
-    <Compile Include="RestaurantSerialization.cs" />
-    <Compile Include="ReviewSerialization.cs" />
+    <Compile Include="PZServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="franchise.xml" />
-    <Content Include="Restaurant.xml" />
-    <Content Include="Review.xml" />
-  </ItemGroup>
-  <ItemGroup>
+    <ProjectReference Include="..\IPZServices\IPZServices.csproj">
+      <Project>{0ed58a0f-f4df-436f-b435-3789f0a78f98}</Project>
+      <Name>IPZServices</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PZModels\PZModels.csproj">
       <Project>{872c9a72-9017-4535-9d09-15b7a2084292}</Project>
       <Name>PZModels</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PZRepositories\PZRepositories.csproj">
+      <Project>{0a4af450-cd7b-4a21-9623-d320c43b507d}</Project>
+      <Name>PZRepositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PZRepositoryInterface\PZRepositoryInterface.csproj">
+      <Project>{feadc998-84e0-4c1d-bb83-33a7a1eb787f}</Project>
+      <Name>PZRepositoryInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PZServices\PZServices.csproj">
+      <Project>{308f0ae1-3879-4e3f-8a4a-8d745a140d55}</Project>
+      <Name>PZServices</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

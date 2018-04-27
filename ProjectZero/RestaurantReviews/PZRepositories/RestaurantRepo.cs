@@ -8,7 +8,7 @@ using PZRepositoryInterface;
 
 namespace PZRepositories
 {
-    class RestaurantRepo : IRestaurantRepo
+    public class RestaurantRepo : IRestaurantRepo
     {
         private readonly PZRepoContext _pzRepoContext;
 

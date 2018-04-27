@@ -27,7 +27,7 @@ namespace PZServices
         public List<Restaurant> GetTopThreeRestaurants()
         {
             IEnumerable<Restaurant> query = _restaurantRepo.GetAll();
-            return query.OrderByDescending(x => x.avgRating).Take(3).ToList();
+            return query.OrderByDescending(x => x.AvgRating).Take(3).ToList();
         }
     }
 }
