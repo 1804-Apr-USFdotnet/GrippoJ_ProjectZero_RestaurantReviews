@@ -40,5 +40,17 @@ namespace ApplicationClient
 
             Console.ReadLine();
         }
+
+        public void PrintByOrder(string order)
+        {
+            List<Restaurant> restaurants = _pzServices.GetRestaurantsByOrder(order);
+
+            foreach (Restaurant r in restaurants)
+            {
+                Console.WriteLine(r.ToString());
+            }
+
+            Console.ReadLine();
+        }
     }
 }

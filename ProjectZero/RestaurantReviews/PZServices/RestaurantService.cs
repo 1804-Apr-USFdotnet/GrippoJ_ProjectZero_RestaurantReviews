@@ -29,5 +29,27 @@ namespace PZServices
             IEnumerable<Restaurant> query = _restaurantRepo.GetAll();
             return query.OrderByDescending(x => x.AvgRating).Take(3).ToList();
         }
+
+        public List<Restaurant> GetRestaurantsByOrder(string order)
+        {
+            IEnumerable<Restaurant> query = _restaurantRepo.GetAll();
+            switch (order.ToLower())
+            {
+                case "name":
+                    return query.OrderBy(x => x.Name).ToList();
+                case "rating":
+                    return query.OrderByDescending(x => x.AvgRating).ToList();
+                case "zipcode":
+                    return query.OrderBy(x => x.Zipcode).ToList();
+                case "city":
+                    return query.OrderBy(x => x.City).ToList();
+                case "state":
+                    return query.OrderBy(x => x.State).ToList();
+                case "address":
+                    return query.OrderBy(x => x.Address).ToList();
+                default:
+                    return query.OrderBy(x => x.Name).ToList();
+            }
+        }
     }
 }

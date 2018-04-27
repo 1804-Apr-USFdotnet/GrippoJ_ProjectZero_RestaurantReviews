@@ -6,9 +6,11 @@ namespace RestaurantReviews
     {
         static void Main(string[] args)
         {
+            var order = "address";
             var application = new PZClient();
             //application.PrintAllRestaurants();
-            application.PrintTopThree();
+            //application.PrintTopThree();
+            application.PrintByOrder(order);
         }
     }
 }

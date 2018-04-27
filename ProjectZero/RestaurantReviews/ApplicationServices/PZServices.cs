@@ -29,13 +29,18 @@ namespace ApplicationServices
             return _restaurantService.AllRestaurants();
         }
 
+        public List<Review> GetAllReviewsForRestaurant(int id)
+        {
+            return _reviewService.ReviewsByRestaurantId(id);
+        }
+
         public void UpdateAverageRating()
         {
             List<Restaurant> restList = GetAllRestaurants();
             foreach (Restaurant r in restList)
             {
-                List<Review> restReviews = _reviewService.ReviewsByRestaurantId(r.rIndex);
-                r.calcAvgRating(restReviews);
+                List<Review> restReviews = GetAllReviewsForRestaurant(r.rIndex);
+                r.CalcAvgRating(restReviews);
             }
         }
 
@@ -44,5 +49,9 @@ namespace ApplicationServices
             return _restaurantService.GetTopThreeRestaurants();
         }
 
+        public List<Restaurant> GetRestaurantsByOrder(string order)
+        {
+            return _restaurantService.GetRestaurantsByOrder(order);
+        }
     }
 }

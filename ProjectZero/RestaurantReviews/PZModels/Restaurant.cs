@@ -35,9 +35,9 @@ namespace PZModels
                 $"\nindex: {rIndex}\nfIndex: {FranchiseID}\nname: {Name} \ncity: {City}\nZip: {Zipcode}\nstate: {State}\naddress: {Address}\naverage rating: {AvgRating}\n";
         }
 
-        public void calcAvgRating(IEnumerable<Review> reviews)
+        public void CalcAvgRating(IEnumerable<Review> reviews)
         {
-            AvgRating = reviews.Select(x => x.Rating).Average();    
+            AvgRating = Math.Round(reviews.Select(x => x.Rating).Average(), 2);    
         }
     }
 }
