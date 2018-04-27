@@ -22,12 +22,10 @@ namespace PZModels
         public string Description { get; set; }
         [XmlElement("Rating")]
         public int Rating { get; set; }
-        [XmlElement("rDate")]
-        public DateTime rDate { get; set; }
 
         public override string ToString()
         {
-            return $"\nrevIndex: {revIndex}\nRestaurantID: {RestaurantID}\nReviewer: {Reviewer}\nReview: {Description}\nRating: {Rating}\nrDate: {rDate}\n";
+            return $"\nrevIndex: {revIndex}\nRestaurantID: {RestaurantID}\nReviewer: {Reviewer}\nReview: {Description}\nRating: {Rating}\n";
         }
     }
 }

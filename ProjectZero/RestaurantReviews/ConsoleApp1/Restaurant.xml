@@ -2,40 +2,40 @@
 <RestaurantCollection>
   <Restaurants>
     <Restaurant>
-      <rIndex>101</rIndex>
+      <rIndex>1</rIndex>
       <FranchiseID>21</FranchiseID>
-      <name>Murica</name>
-      <city>New Rochelle</city>
-      <zipcode>10801</zipcode>
-      <state>New York</state>
-      <address>1 belmont ave</address>
+      <Name>Murica</Name>
+      <City>New Rochelle</City>
+      <Zipcode>10801</Zipcode>
+      <State>New York</State>
+      <Address>1 belmont ave</Address>
     </Restaurant>
     <Restaurant>
-      <rIndex>102</rIndex>
+      <rIndex>2</rIndex>
       <FranchiseID>21</FranchiseID>
-      <name>Murica</name>
-      <city>New Roc</city>
-      <zipcode>10802</zipcode>
-      <state>New Yank</state>
-      <address>2 belmont ave</address>
+      <Name>Murica</Name>
+      <City>New Roc</City>
+      <Zipcode>10802</Zipcode>
+      <State>New Yank</State>
+      <Address>2 belmont ave</Address>
     </Restaurant>
     <Restaurant>
-      <rIndex>103</rIndex>
+      <rIndex>3</rIndex>
       <FranchiseID>22</FranchiseID>
-      <name>Sal's Pizza</name>
-      <city>New Rochelle</city>
-      <zipcode>10801</zipcode>
-      <state>New York</state>
-      <address>3 belmont ave</address>
+      <Name>Sal's Pizza</Name>
+      <City>New Rochelle</City>
+      <Zipcode>10801</Zipcode>
+      <State>New York</State>
+      <Address>3 belmont ave</Address>
     </Restaurant>
     <Restaurant>
-      <rIndex>104</rIndex>
+      <rIndex>4</rIndex>
       <FranchiseID>22</FranchiseID>
-      <name>Sal's Pizza</name>
-      <city>New Roc</city>
-      <zipcode>10802</zipcode>
-      <state>New Yank</state>
-      <address>4 belmont ave</address>
+      <Name>Sal's Pizza</Name>
+      <City>New Roc</City>
+      <Zipcode>10802</Zipcode>
+      <State>New Yank</State>
+      <Address>4 belmont ave</Address>
     </Restaurant>
   </Restaurants>
 </RestaurantCollection>

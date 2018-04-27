@@ -8,7 +8,7 @@ using PZRepositoryInterface;
 
 namespace PZRepositories
 {
-    class ReviewRepo : IReviewRepo
+    public class ReviewRepo : IReviewRepo
     {
         private readonly PZRepoContext _pzRepoContext;
 

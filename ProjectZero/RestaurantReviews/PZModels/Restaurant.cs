@@ -26,8 +26,8 @@ namespace PZModels
         public string State { get; set; }
         [XmlElement("Address")]
         public string Address { get; set; }
-        [XmlElement("AvgRating")]
-        public double AvgRating  { get; set; }
+        [XmlIgnore]
+        public double? AvgRating  { get; set; }
 
         public override string ToString()
         {
