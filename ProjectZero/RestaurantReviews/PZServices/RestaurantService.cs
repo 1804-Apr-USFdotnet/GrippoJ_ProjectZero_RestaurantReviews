@@ -3,6 +3,7 @@ using System.Linq;
 using IPZServices;
 using PZModels;
 using PZRepositoryInterface;
+using System.Text.RegularExpressions;
 
 namespace PZServices
 {
@@ -50,6 +51,12 @@ namespace PZServices
                 default:
                     return query.OrderBy(x => x.Name).ToList();
             }
+        }
+
+        public List<Restaurant> SearchRestaurants(string search)
+        {
+            IEnumerable<Restaurant> query = _restaurantRepo.GetAll().Where(x => Regex.IsMatch(x.Name,search));
+            return query.ToList();
         }
     }
 }

@@ -20,36 +20,39 @@ namespace ApplicationClient
         public void PrintAllRestaurants()
         {
             List<Restaurant> restaurants = _pzServices.GetAllRestaurants();
-
-            foreach (Restaurant r in restaurants)
-            {
-                Console.WriteLine(r.ToString());
-            }
-
-            Console.ReadLine();
+            Print(restaurants);
         }
 
         public void PrintTopThree()
         {
             List<Restaurant> restaurants = _pzServices.GetTopThreeRestaurants();
-
-            foreach (Restaurant r in restaurants)
-            {
-                Console.WriteLine(r.ToString());
-            }
-
-            Console.ReadLine();
+            Print(restaurants);
         }
 
         public void PrintByOrder(string order)
         {
             List<Restaurant> restaurants = _pzServices.GetRestaurantsByOrder(order);
+            Print(restaurants);
+        }
 
-            foreach (Restaurant r in restaurants)
+        public void PrintReviewsForRestaurant(int id)
+        {
+            List<Review> reviews = _pzServices.GetAllReviewsForRestaurant(id);
+            Print(reviews);
+        }
+
+        public void PrintRestaurantSearch(string search)
+        {
+            List<Restaurant> restaurants = _pzServices.GetRestaurantBySearch(search);
+            Print(restaurants);
+        }
+
+        public void Print<T>(List<T> data)
+        {
+            foreach(var r in data)
             {
                 Console.WriteLine(r.ToString());
             }
-
             Console.ReadLine();
         }
     }

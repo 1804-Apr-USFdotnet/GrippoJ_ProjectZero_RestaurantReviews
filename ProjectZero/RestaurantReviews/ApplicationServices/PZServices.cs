@@ -53,5 +53,10 @@ namespace ApplicationServices
         {
             return _restaurantService.GetRestaurantsByOrder(order);
         }
+
+        public List<Restaurant> GetRestaurantBySearch(string search)
+        {
+            return _restaurantService.SearchRestaurants(search);
+        }
     }
 }

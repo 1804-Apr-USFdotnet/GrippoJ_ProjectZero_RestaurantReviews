@@ -10,5 +10,6 @@ namespace IPZServices
         Restaurant RestaurantById(int id);
         List<Restaurant> GetTopThreeRestaurants();
         List<Restaurant> GetRestaurantsByOrder(string order);
+        List<Restaurant> SearchRestaurants(string search);
     }
 }

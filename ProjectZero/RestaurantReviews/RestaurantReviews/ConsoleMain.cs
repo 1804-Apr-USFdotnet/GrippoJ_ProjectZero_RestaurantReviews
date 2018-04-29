@@ -10,7 +10,9 @@ namespace RestaurantReviews
             var application = new PZClient();
             //application.PrintAllRestaurants();
             //application.PrintTopThree();
-            application.PrintByOrder(order);
+            //application.PrintByOrder(order);
+            //application.PrintReviewsForRestaurant(2);
+            application.PrintRestaurantSearch("Mur");
         }
     }
 }
