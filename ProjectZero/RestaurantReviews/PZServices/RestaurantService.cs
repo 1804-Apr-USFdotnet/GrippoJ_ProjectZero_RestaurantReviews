@@ -54,7 +54,7 @@ namespace PZServices
                 case "address":
                     return query.OrderBy(x => x.Address).ToList();
                 default:
-                    return query.OrderBy(x => x.Name).ToList();
+                    return new List<Restaurant>();
             }
         }
 

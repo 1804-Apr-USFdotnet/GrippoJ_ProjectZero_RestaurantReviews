@@ -32,7 +32,12 @@ namespace ApplicationClient
         public void PrintByOrder(string order)
         {
             List<Restaurant> restaurants = _pzServices.GetRestaurantsByOrder(order);
-            Print(restaurants);
+            if (restaurants.Count == 0)
+            {
+                Console.WriteLine("Invalid order argument.");
+            }
+            else
+                Print(restaurants);
         }
 
         public void PrintReviewsForRestaurant(string restaurant)
