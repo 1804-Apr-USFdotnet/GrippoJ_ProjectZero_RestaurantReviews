@@ -22,6 +22,11 @@ namespace PZRepositories
             return _pzRepoContext.Restaurants.First(x => x.rIndex == id);
         }
 
+        public Restaurant GetByName(string restaurant)
+        {
+            return _pzRepoContext.Restaurants.First(x => x.Name == restaurant);
+        }
+
         public IEnumerable<Restaurant> GetAll()
         {
             return _pzRepoContext.Restaurants;

@@ -25,6 +25,11 @@ namespace PZServices
             return _restaurantRepo.GetById(id);
         }
 
+        public Restaurant RestaurantByName(string restaurant)
+        {
+            return _restaurantRepo.GetByName(restaurant);
+        }
+
         public List<Restaurant> GetTopThreeRestaurants()
         {
             IEnumerable<Restaurant> query = _restaurantRepo.GetAll();

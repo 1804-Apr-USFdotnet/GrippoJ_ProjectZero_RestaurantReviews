@@ -35,16 +35,21 @@ namespace ApplicationClient
             Print(restaurants);
         }
 
-        public void PrintReviewsForRestaurant(int id)
+        public void PrintReviewsForRestaurant(string restaurant)
         {
-            List<Review> reviews = _pzServices.GetAllReviewsForRestaurant(id);
+            List<Review> reviews = _pzServices.GetAllReviewsForRestaurant(restaurant);
             Print(reviews);
         }
 
         public void PrintRestaurantSearch(string search)
         {
             List<Restaurant> restaurants = _pzServices.GetRestaurantBySearch(search);
-            Print(restaurants);
+            if (restaurants.Count == 0)
+            {
+                Console.WriteLine("Search returned no values.");
+            }
+            else 
+                Print(restaurants);
         }
 
         public void Print<T>(List<T> data)
@@ -53,7 +58,17 @@ namespace ApplicationClient
             {
                 Console.WriteLine(r.ToString());
             }
-            Console.ReadLine();
+        }
+
+        public void PrintMenu()
+        {
+            Console.WriteLine("\nPlease Select your option:\n");
+            Console.WriteLine("0: quit");
+            Console.WriteLine("1: Get Restaurants.");
+            Console.WriteLine("2: Get the top three rated Restaurants.");
+            Console.WriteLine("3: Get the reviews for a Restaurant.");
+            Console.WriteLine("4: Search for Restaurants.");
+            Console.WriteLine("5: Sort the current Restaurants.");
         }
     }
 }

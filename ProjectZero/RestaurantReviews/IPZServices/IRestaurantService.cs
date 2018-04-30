@@ -8,8 +8,10 @@ namespace IPZServices
     {
         List<Restaurant> AllRestaurants();
         Restaurant RestaurantById(int id);
+        Restaurant RestaurantByName(string restaurant);
         List<Restaurant> GetTopThreeRestaurants();
         List<Restaurant> GetRestaurantsByOrder(string order);
         List<Restaurant> SearchRestaurants(string search);
+        
     }
 }
