@@ -63,5 +63,10 @@ namespace PZServices
             IEnumerable<Restaurant> query = _restaurantRepo.GetAll().Where(x => Regex.IsMatch(x.Name,search));
             return query.ToList();
         }
+
+        public void AddRestaurant(Restaurant restaurant)
+        {
+            _restaurantRepo.Add(restaurant);
+        }
     }
 }
