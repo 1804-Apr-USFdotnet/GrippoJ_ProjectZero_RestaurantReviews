@@ -5,10 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 using PZModels;
+using PZRepositoryInterface;
 
 namespace PZRepositories
 {
-    public class PZRepoContext : DbContext
+    public class PZRepoContext : DbContext, IPZRepoContext
     {
         public PZRepoContext() : base("name=PZRestaurantConnectionString")
         {

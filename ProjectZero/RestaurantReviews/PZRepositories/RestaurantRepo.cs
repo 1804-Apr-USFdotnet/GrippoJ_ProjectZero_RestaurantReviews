@@ -10,9 +10,9 @@ namespace PZRepositories
 {
     public class RestaurantRepo : IRestaurantRepo
     {
-        private readonly PZRepoContext _pzRepoContext;
+        private readonly IPZRepoContext _pzRepoContext;
 
-        public RestaurantRepo(PZRepoContext context)
+        public RestaurantRepo(IPZRepoContext context)
         {
             _pzRepoContext = context;
         }
