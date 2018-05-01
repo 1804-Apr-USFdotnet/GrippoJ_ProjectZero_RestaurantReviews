@@ -10,5 +10,6 @@ namespace IPZServices
         List<Review> AllReviews();
         Review ReviewById(int id);
         List<Review> ReviewsByRestaurantId(int id);
+        void AddReview(Review review);
     }
 }

@@ -10,9 +10,9 @@ namespace PZRepositories
 {
     public class ReviewRepo : IReviewRepo
     {
-        private readonly PZRepoContext _pzRepoContext;
+        private readonly IPZRepoContext _pzRepoContext;
 
-        public ReviewRepo(PZRepoContext context)
+        public ReviewRepo(IPZRepoContext context)
         {
             _pzRepoContext = context;
         }

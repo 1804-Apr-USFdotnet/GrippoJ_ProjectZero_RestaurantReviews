@@ -32,5 +32,10 @@ namespace PZServices
             IEnumerable<Review> query = _pzReviewRepo.GetAll().Where(x => x.RestaurantID == id);
             return query.ToList();
         }
+
+        public void AddReview(Review review)
+        {
+            _pzReviewRepo.Add(review);
+        }
     }
 }

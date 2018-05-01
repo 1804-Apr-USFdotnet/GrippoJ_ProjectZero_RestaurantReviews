@@ -16,7 +16,6 @@ namespace DataTests
     {
         private readonly Mock<IPZRepoContext> _moqContext;
         private readonly Mock<DbSet<Restaurant>> _moqSet;
-        private readonly Mock<IRestaurantRepo> _moqRepo;
 
         private readonly Restaurant r;
         private readonly List<Restaurant> restaurants;
@@ -25,7 +24,6 @@ namespace DataTests
         {
             _moqContext = new Mock<IPZRepoContext>();
             _moqSet = new Mock<DbSet<Restaurant>>();
-            _moqRepo = new Mock<IRestaurantRepo>();
 
             _moqContext.Setup(m => m.Restaurants).Returns(_moqSet.Object);
         }
@@ -47,25 +45,6 @@ namespace DataTests
 
             _moqContext.Verify(m => m.SaveChanges(), Times.Once);
         }
-
-        //[TestMethod]
-        //public void GetById_PassedInt_AssertReturnType()
-        //{
-
-        //    var service = new RestaurantRepo(_moqContext.Object);
-        //    var restById = service.GetById(1);
-
-        //    //Assert.IsInstanceOfType(restById, typeof(Restaurant));
-        //}
-
-        //[TestMethod]
-        //public void GetByName_PassedString_AssertReturnType()
-        //{
-        //    var service = new RestaurantRepo(_moqContext.Object);
-        //    var restByName = service.GetByName(It.IsAny<string>());
-
-        //    //Assert.IsInstanceOfType(restByName, typeof(Restaurant));
-        //}
 
         [TestMethod]
         public void GetAll_AssertReturnType()
