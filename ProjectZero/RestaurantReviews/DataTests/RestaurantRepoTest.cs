@@ -15,14 +15,12 @@ namespace DataTests
     {
         private readonly Mock<IPZRepoContext> _moqContext;
         private readonly Mock<DbSet<Restaurant>> _moqSet;
-        private readonly Mock<IReviewRepo> _moqRepo;
         private readonly Restaurant r;
 
         public RestaurantRepoTest()
         {
             _moqContext = new Mock<IPZRepoContext>();
             _moqSet = new Mock<DbSet<Restaurant>>();
-            _moqRepo = new Mock<IReviewRepo>();
 
             _moqContext.Setup(m => m.Restaurants).Returns(_moqSet.Object);
 

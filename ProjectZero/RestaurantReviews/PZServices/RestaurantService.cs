@@ -10,6 +10,7 @@ namespace PZServices
     public class RestaurantService : IRestaurantService
     {
         private readonly IRestaurantRepo _restaurantRepo;
+
         public RestaurantService(IRestaurantRepo restaurantRepo)
         {
             _restaurantRepo = restaurantRepo;
