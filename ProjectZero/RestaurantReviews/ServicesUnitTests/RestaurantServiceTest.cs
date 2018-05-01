@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using PZModels;
 using PZRepositoryInterface;
+using PZServices;
 
 namespace ServicesUnitTests
 {
@@ -31,9 +32,40 @@ namespace ServicesUnitTests
         }
 
         [TestMethod]
-        public void TestMethod1()
+        public void GetTopThree_CallsGetAllOnce()
         {
+            var service = new RestaurantService(_moqRepo.Object);
+            service.GetTopThreeRestaurants();
 
+            _moqRepo.Verify(m=>m.GetAll(),Times.Once);
+
+        }
+
+        [TestMethod]
+        public void AllRestuarants_CallsGetAllOnce()
+        {
+            var service = new RestaurantService(_moqRepo.Object);
+            service.AllRestaurants();
+
+            _moqRepo.Verify(m => m.GetAll(), Times.Once);
+        }
+
+        [TestMethod]
+        public void RestuarantById_CallsGetByIdOnce()
+        {
+            var service = new RestaurantService(_moqRepo.Object);
+            service.RestaurantById(It.IsAny<int>());
+
+            _moqRepo.Verify(m => m.GetById(It.IsAny<int>()), Times.Once);
+        }
+
+        [TestMethod]
+        public void RestuarantByName_CallsGetByNameOnce()
+        {
+            var service = new RestaurantService(_moqRepo.Object);
+            service.RestaurantByName(It.IsAny<string>());
+
+            _moqRepo.Verify(m => m.GetByName(It.IsAny<string>()), Times.Once);
         }
     }
 }
