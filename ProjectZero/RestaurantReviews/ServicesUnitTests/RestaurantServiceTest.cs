@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using PZModels;
@@ -185,6 +186,35 @@ namespace ServicesUnitTests
             var rList = service.GetRestaurantsByOrder("lmao");
 
             CollectionAssert.AreEqual(rList, new List<Restaurant>());
+        }
+
+        [TestMethod]
+        public void GetRestaurantsBySearch_PassedAString_AssertCollectionsEqual()
+        {
+            var service = new RestaurantService(_moqRepo.Object);
+            var rList = service.SearchRestaurants("Z");
+
+            CollectionAssert.AreEqual(rList, _moqRepo.Object.GetAll().Where(x => Regex.IsMatch(x.Name, "Z")).ToList());
+        }
+
+        [TestMethod]
+        public void Add_PassedARestaurant_CallsAdd()
+        {
+            var service = new RestaurantService(_moqRepo.Object);
+            var r = new Restaurant
+            {
+                rIndex = 5,
+                FranchiseID = 5,
+                Name = "TestRestaurant5",
+                City = "city5",
+                Zipcode = "10804",
+                State = "NY",
+                Address = " 5 a",
+                AvgRating = 9.9
+            };
+
+            service.AddRestaurant(r);
+            _moqRepo.Verify(m => m.Add(It.IsAny<Restaurant>()), Times.Once);
         }
     }
 }
